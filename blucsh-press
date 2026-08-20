@@ -1,0 +1,1378 @@
+bagi <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blush & Nails | Beauty Boutique</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff9fa;
+    color:#3d3035;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    height:75px;
+    padding:0 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid #f3dfe5;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#c95b7d;
+}
+
+.logo span{
+    font-weight:normal;
+    color:#8e747d;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#514148;
+    font-size:14px;
+    cursor:pointer;
+}
+
+nav a:hover{
+    color:#c95b7d;
+}
+
+.cart-button{
+    border:none;
+    background:#f4c4d2;
+    color:#7d4053;
+    padding:10px 17px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:70px 8%;
+    gap:50px;
+    background:#fdf1f4;
+}
+
+.hero-text{
+    max-width:540px;
+}
+
+.hero-label{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#b75878;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:64px;
+    line-height:1.05;
+    margin:18px 0;
+    color:#49363d;
+}
+
+.hero h1 span{
+    color:#c95b7d;
+}
+
+.hero p{
+    color:#79666d;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+.hero-button{
+    display:inline-block;
+    background:#c95b7d;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.hero-image{
+    width:48%;
+    height:420px;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+/* SECTION */
+
+.section{
+    width:88%;
+    max-width:1200px;
+    margin:80px auto;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-heading small{
+    color:#c95b7d;
+    letter-spacing:2px;
+}
+
+.section-heading h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin:10px 0;
+}
+
+.section-heading p{
+    color:#89757c;
+}
+
+/* CATEGORY */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category{
+    background:#fff;
+    border:1px solid #f0dfe4;
+    padding:28px 15px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.category h3{
+    font-size:15px;
+    margin-top:12px;
+}
+
+.category p{
+    color:#967f87;
+    font-size:12px;
+    margin-top:6px;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border:1px solid #f0dfe4;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(170,90,110,.12);
+}
+
+.product-image{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-category{
+    color:#b95b79;
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.product h3{
+    font-family:Georgia,serif;
+    font-size:20px;
+    margin:9px 0;
+}
+
+.price{
+    color:#c64f76;
+    font-size:21px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+/* SELECT */
+
+select{
+    width:100%;
+    padding:11px;
+    border:1px solid #e8d4da;
+    background:white;
+    border-radius:8px;
+    margin:5px 0;
+    color:#55434a;
+}
+
+/* ADD BUTTON */
+
+.add-button{
+    width:100%;
+    padding:13px;
+    margin-top:10px;
+    border:none;
+    background:#e9b1c2;
+    color:#743b4e;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.add-button:hover{
+    background:#c95b7d;
+    color:white;
+}
+
+/* ABOUT */
+
+.about{
+    background:#fdf1f4;
+    padding:70px 8%;
+    text-align:center;
+}
+
+.about-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.about h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.about p{
+    line-height:1.9;
+    color:#765f68;
+}
+
+/* CART */
+
+.cart-panel{
+    position:fixed;
+    top:0;
+    right:-430px;
+    width:410px;
+    max-width:95%;
+    height:100vh;
+    background:white;
+    z-index:500;
+    box-shadow:-10px 0 35px rgba(0,0,0,.15);
+    padding:25px;
+    transition:.3s;
+    overflow-y:auto;
+}
+
+.cart-panel.open{
+    right:0;
+}
+
+.close-cart{
+    float:right;
+    border:none;
+    background:none;
+    font-size:27px;
+    cursor:pointer;
+}
+
+.cart-panel h2{
+    font-family:Georgia,serif;
+    color:#c95b7d;
+    margin-bottom:25px;
+}
+
+.cart-item{
+    border-bottom:1px solid #eee;
+    padding:16px 0;
+}
+
+.cart-item strong{
+    display:block;
+    margin-bottom:6px;
+}
+
+.remove-button{
+    margin-top:8px;
+    border:none;
+    background:none;
+    color:#c95b7d;
+    cursor:pointer;
+}
+
+.cart-total{
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+    color:#c95b7d;
+}
+
+.checkout{
+    width:100%;
+    border:none;
+    background:#c95b7d;
+    color:white;
+    padding:15px;
+    border-radius:25px;
+    margin-top:20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ADMIN */
+
+.admin{
+    background:white;
+    border-top:1px solid #f0dfe4;
+}
+
+.admin-box{
+    max-width:900px;
+    margin:auto;
+    border:1px solid #ead9de;
+    padding:30px;
+    border-radius:15px;
+}
+
+.admin-login{
+    max-width:350px;
+    margin:auto;
+    text-align:center;
+}
+
+.admin-login input{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border:1px solid #e5d1d8;
+    border-radius:8px;
+}
+
+.admin-button{
+    border:none;
+    background:#c95b7d;
+    color:white;
+    padding:12px 25px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.admin-content{
+    display:none;
+}
+
+.admin-form{
+    background:#fdf1f4;
+    padding:20px;
+    margin-top:20px;
+    border-radius:12px;
+}
+
+.admin-form input,
+.admin-form select{
+    width:100%;
+    padding:11px;
+    margin:5px 0;
+    border:1px solid #e5d1d8;
+    border-radius:7px;
+}
+
+.admin-product{
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.delete{
+    border:none;
+    background:#f3d0da;
+    color:#91445b;
+    padding:8px 12px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#403238;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+footer strong{
+    color:#f0b6c8;
+    letter-spacing:2px;
+}
+
+footer p{
+    color:#cdbec3;
+    margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image{
+        width:100%;
+        height:350px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        height:auto;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:50px 6%;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .categories{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .section{
+        width:92%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+BLUSH <span>& NAILS</span>
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+
+<button class="cart-button" onclick="openCart()">
+🛍 Cart (<span id="cartCount">0</span>)
+</button>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<div class="hero-label">
+BEAUTY • NAILS • SELF CARE
+</div>
+
+<h1>
+Your Beauty.<br>
+Your <span>Style.</span>
+</h1>
+
+<p>
+Discover beautiful press-on nails and everyday beauty
+essentials designed to make you feel confident,
+feminine and effortlessly pretty.
+</p>
+
+<a href="#shop" class="hero-button">
+SHOP COLLECTION
+</a>
+
+</div>
+
+
+<img
+class="hero-image"
+src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=85"
+alt="Beauty nails">
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<small>SHOP YOUR FAVOURITES</small>
+
+<h2>Beauty Collection</h2>
+
+<p>Everything for your pretty little routine.</p>
+
+</div>
+
+
+<div class="categories">
+
+<div class="category">
+<div style="font-size:35px;">💅</div>
+<h3>Press-On Nails</h3>
+<p>Pretty designs for every mood</p>
+</div>
+
+<div class="category">
+<div style="font-size:35px;">💄</div>
+<h3>Makeup</h3>
+<p>Soft everyday beauty</p>
+</div>
+
+<div class="category">
+<div style="font-size:35px;">🧴</div>
+<h3>Self Care</h3>
+<p>Little things that feel good</p>
+</div>
+
+<div class="category">
+<div style="font-size:35px;">🎀</div>
+<h3>Accessories</h3>
+<p>Complete your beauty look</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="shop">
+
+<div class="section-heading">
+
+<small>NEW & LOVELY</small>
+
+<h2>Our Best Sellers</h2>
+
+<p>Choose your favourite style.</p>
+
+</div>
+
+
+<div class="products">
+
+
+<!-- NAILS 1 -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85"
+alt="Pink press on nails">
+
+<div class="product-info">
+
+<div class="product-category">
+PRESS-ON NAILS
+</div>
+
+<h3>Rosé French Nails</h3>
+
+<div class="price">RM29</div>
+
+<select id="nail1size">
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+</select>
+
+<select id="nail1color">
+<option>Baby Pink</option>
+<option>French White</option>
+<option>Rose Pink</option>
+<option>Nude</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Rosé French Nails',29,'nail1size','nail1color')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- NAILS 2 -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1610992015762-45dca7c5e5d1?auto=format&fit=crop&w=900&q=85"
+alt="Nail design">
+
+<div class="product-info">
+
+<div class="product-category">
+PRESS-ON NAILS
+</div>
+
+<h3>Blush Pearl Nails</h3>
+
+<div class="price">RM32</div>
+
+<select id="nail2size">
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+</select>
+
+<select id="nail2color">
+<option>Blush Pink</option>
+<option>Pearl White</option>
+<option>Champagne</option>
+<option>Lavender</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Blush Pearl Nails',32,'nail2size','nail2color')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- NAILS 3 -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=85"
+alt="Pink manicure">
+
+<div class="product-info">
+
+<div class="product-category">
+PRESS-ON NAILS
+</div>
+
+<h3>Soft Pink Gloss Nails</h3>
+
+<div class="price">RM25</div>
+
+<select id="nail3size">
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+</select>
+
+<select id="nail3color">
+<option>Soft Pink</option>
+<option>Baby Blue</option>
+<option>Milky White</option>
+<option>Peach</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Soft Pink Gloss Nails',25,'nail3size','nail3color')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- LIP -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=900&q=85"
+alt="Lip gloss">
+
+<div class="product-info">
+
+<div class="product-category">
+MAKEUP
+</div>
+
+<h3>Glass Shine Lip Gloss</h3>
+
+<div class="price">RM22</div>
+
+<select id="lipcolor">
+<option>Clear</option>
+<option>Baby Pink</option>
+<option>Rose</option>
+<option>Peach</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Glass Shine Lip Gloss',22,'none','lipcolor')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BLUSH -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=900&q=85"
+alt="Blush makeup">
+
+<div class="product-info">
+
+<div class="product-category">
+MAKEUP
+</div>
+
+<h3>Soft Rosy Blush</h3>
+
+<div class="price">RM35</div>
+
+<select id="blushcolor">
+<option>Baby Pink</option>
+<option>Rose</option>
+<option>Peach</option>
+<option>Nude</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Soft Rosy Blush',35,'none','blushcolor')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BEAUTY BAG -->
+
+<div class="product">
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85"
+alt="Beauty products">
+
+<div class="product-info">
+
+<div class="product-category">
+BEAUTY ACCESSORIES
+</div>
+
+<h3>Everyday Beauty Pouch</h3>
+
+<div class="price">RM39</div>
+
+<select id="bagcolor">
+<option>Blush Pink</option>
+<option>Cream</option>
+<option>Black</option>
+<option>Lavender</option>
+</select>
+
+<button
+class="add-button"
+onclick="addToCart('Everyday Beauty Pouch',39,'none','bagcolor')">
+
+ADD TO BAG
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-content">
+
+<h2>About Blush & Nails</h2>
+
+<p>
+Blush & Nails is a feminine online beauty boutique offering
+press-on nails, makeup and beauty accessories for customers
+who love simple, pretty and effortless looks.
+Our goal is to make everyday beauty feel fun, affordable
+and easy.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CART -->
+
+<div class="cart-panel" id="cartPanel">
+
+<button class="close-cart" onclick="closeCart()">×</button>
+
+<h2>Your Beauty Bag</h2>
+
+<div id="cartItems">
+
+<p style="color:#999;">
+Your bag is empty.
+</p>
+
+</div>
+
+<div class="cart-total">
+
+Total: RM<span id="cartTotal">0.00</span>
+
+</div>
+
+<button class="checkout" onclick="checkout()">
+
+CHECKOUT
+
+</button>
+
+</div>
+
+
+<!-- ADMIN -->
+
+<section class="section admin">
+
+<div class="section-heading">
+
+<small>STORE MANAGEMENT</small>
+
+<h2>Admin Panel</h2>
+
+<p>Manage products for your e-commerce store.</p>
+
+</div>
+
+
+<div class="admin-box">
+
+<div class="admin-login" id="adminLogin">
+
+<h3>Admin Login</h3>
+
+<p style="color:#888;margin-top:8px;">
+Demo password: <b>blush123</b>
+</p>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter password">
+
+<button
+class="admin-button"
+onclick="adminLogin()">
+
+LOGIN
+
+</button>
+
+<p id="loginMessage" style="margin-top:10px;"></p>
+
+</div>
+
+
+<div id="adminContent" class="admin-content">
+
+<h3>Welcome Admin ♡</h3>
+
+<div class="admin-form">
+
+<h3>Add Product</h3>
+
+<input
+id="newProductName"
+placeholder="Product name">
+
+<input
+id="newProductPrice"
+type="number"
+placeholder="Price RM">
+
+<select id="newProductCategory">
+
+<option>Press-On Nails</option>
+<option>Makeup</option>
+<option>Self Care</option>
+<option>Accessories</option>
+
+</select>
+
+<input
+id="newProductImage"
+placeholder="Product image URL">
+
+<button
+class="admin-button"
+onclick="addProduct()">
+
+ADD PRODUCT
+
+</button>
+
+</div>
+
+<h3 style="margin-top:25px;">
+Current Products
+</h3>
+
+<div id="adminProducts"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>BLUSH & NAILS</strong>
+
+<p>Beauty made pretty. ♡</p>
+
+<p>© 2026 Blush & Nails</p>
+
+</footer>
+
+
+<script>
+
+let cart=[];
+
+
+function addToCart(name,price,sizeId,colorId){
+
+let size="";
+
+let color="";
+
+if(sizeId!=="none"){
+
+size=document.getElementById(sizeId).value;
+
+}
+
+color=document.getElementById(colorId).value;
+
+
+cart.push({
+
+name:name,
+price:price,
+size:size,
+color:color
+
+});
+
+
+updateCart();
+
+alert(name+" added to your beauty bag ♡");
+
+}
+
+
+function updateCart(){
+
+document.getElementById("cartCount").innerText=cart.length;
+
+let box=document.getElementById("cartItems");
+
+let total=0;
+
+if(cart.length===0){
+
+box.innerHTML=
+'<p style="color:#999;">Your bag is empty.</p>';
+
+document.getElementById("cartTotal").innerText="0.00";
+
+return;
+
+}
+
+box.innerHTML="";
+
+
+cart.forEach(function(item,index){
+
+total+=Number(item.price);
+
+box.innerHTML+=`
+
+<div class="cart-item">
+
+<strong>${item.name}</strong>
+
+<div>
+Colour: ${item.color}
+</div>
+
+${item.size ? `<div>Size: ${item.size}</div>` : ""}
+
+<div style="margin-top:5px;">
+RM${item.price}
+</div>
+
+<button
+class="remove-button"
+onclick="removeItem(${index})">
+
+Remove
+
+</button>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById("cartTotal")
+.innerText=total.toFixed(2);
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+function openCart(){
+
+document
+.getElementById("cartPanel")
+.classList.add("open");
+
+}
+
+
+function closeCart(){
+
+document
+.getElementById("cartPanel")
+.classList.remove("open");
+
+}
+
+
+function checkout(){
+
+if(cart.length===0){
+
+alert("Your beauty bag is empty ♡");
+
+return;
+
+}
+
+alert(
+"Thank you for shopping with Blush & Nails! ♡\n\n"+
+"This checkout is a demonstration for the e-commerce assignment."
+);
+
+}
+
+
+/* ADMIN */
+
+function adminLogin(){
+
+let password=
+document.getElementById("adminPassword").value;
+
+if(password==="blush123"){
+
+document.getElementById("adminLogin").style.display="none";
+
+document.getElementById("adminContent").style.display="block";
+
+displayAdminProducts();
+
+}else{
+
+document.getElementById("loginMessage").innerText=
+"Incorrect password.";
+
+document.getElementById("loginMessage").style.color="#c95b7d";
+
+}
+
+}
+
+
+function addProduct(){
+
+let name=
+document.getElementById("newProductName").value;
+
+let price=
+document.getElementById("newProductPrice").value;
+
+let category=
+document.getElementById("newProductCategory").value;
+
+let image=
+document.getElementById("newProductImage").value;
+
+
+if(!name || !price || !image){
+
+alert("Please fill in all fields.");
+
+return;
+
+}
+
+
+let product={
+
+name:name,
+price:price,
+category:category,
+image:image
+
+};
+
+
+let saved=
+JSON.parse(localStorage.getItem("beautyProducts") || "[]");
+
+saved.push(product);
+
+localStorage.setItem(
+"beautyProducts",
+JSON.stringify(saved)
+);
+
+
+alert("Product added successfully ♡");
+
+displayAdminProducts();
+
+}
+
+
+function displayAdminProducts(){
+
+let box=
+document.getElementById("adminProducts");
+
+let saved=
+JSON.parse(localStorage.getItem("beautyProducts") || "[]");
+
+if(saved.length===0){
+
+box.innerHTML=
+"<p style='color:#999;margin-top:15px;'>No additional products yet.</p>";
+
+return;
+
+}
+
+
+box.innerHTML="";
+
+
+saved.forEach(function(product,index){
+
+box.innerHTML+=`
+
+<div class="admin-product">
+
+<div>
+
+<strong>${product.name}</strong>
+
+<br>
+
+<small>
+${product.category} • RM${product.price}
+</small>
+
+</div>
+
+<button
+class="delete"
+onclick="deleteProduct(${index})">
+
+Delete
+
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+function deleteProduct(index){
+
+let saved=
+JSON.parse(localStorage.getItem("beautyProducts") || "[]");
+
+saved.splice(index,1);
+
+localStorage.setItem(
+"beautyProducts",
+JSON.stringify(saved)
+);
+
+displayAdminProducts();
+
+}
+
+</script>
+
+</body>
+</html>
